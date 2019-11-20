@@ -1,0 +1,126 @@
+int x=0;
+void setup() {
+  size(320, 270);
+  background(0);
+  noStroke();
+  frameRate(240);
+}
+void draw() {
+  //germany, flag 1
+  fill(0); //black first horizontal bar
+  rect(0+x, 0, width+x, width); 
+  fill(255, 0, 0); //red middle horizontal bar
+  rect(0+x, 90, width+x, width);
+  fill(240, 240, 0); //gold last horizontal bar
+  rect(0+x, 180, width+x, width);
+
+  //japan, flag 2
+  fill(255); //white background
+  rect(0+x-width, 0, width, height);
+  fill(255, 0, 0); //red circle middle
+  ellipse(width/2+x-width, height/2, 150, 150);
+
+  //france, flag 3
+  fill(0, 0, 255); //left blue vertical bar
+  rect(0+x-2*width, 0, width/3, height);
+  fill(255); //middle white vertical bar
+  rect(width/3+x-2*width, 0, width/3, height);
+  fill(255, 0, 0); //right red vertical bar
+  rect(2.0/3.0*width+x-2*width, 0, width/3, height);
+
+  //brazil, flag 4
+  fill(0, 180, 0); //dark green background
+  rect(0+x-3*width, 0, width, height);
+  fill(230, 230, 0); //gold rhombus
+  triangle(width/10+x-3*width, height/2, width/2+x-3*width, 30, width/2+x-3*width, 240);        //gold rhombus left side
+  triangle(9.0/10.0*width+x-3*width, height/2, width/2+x-3*width, 30, width/2+x-3*width, 240); //gold rhombus right side
+  fill(0, 0, 150); //dark blue circle
+  ellipse(width/2+x-3*width, height/2, 120, 120);
+  fill(255); //stars
+  ellipse(170+x-3*width, 170, 3, 3); //stars 1
+  ellipse(177+x-3*width, 185, 3, 3); //stars 2
+  ellipse(151+x-3*width, 155, 3, 3); //stars 3
+  ellipse(112+x-3*width, 145, 3, 3); //stars 4
+  ellipse(132+x-3*width, 165, 3, 3); //stars 5
+  ellipse(147+x-3*width, 148, 3, 3); //stars 6
+  ellipse(157+x-3*width, 168, 3, 3); //stars 7
+  ellipse(180+x-3*width, 188, 3, 3); //stars 8
+  ellipse(190+x-3*width, 158, 3, 3); //stars 9
+
+  //sweden, flag 5
+  fill(0, 100, 190); //blueish teal background
+  rect(0+x-4*width, 0, width, height); //the "-4*width" needs to be added after every
+  fill(240, 210, 0); // gold nordic cross //^first x-place in order for the flags to follow one after
+  rect(width/4+x-4*width, 0, 30, height); //another like a big continuous flag, so the subsequent 
+  rect(0+x-4*width, height/2-15, width, 30); //ones will be "-5*width", "-6*width", etc
+  //the "-15"^ is to center the horizontal line
+
+  //norsefire, flag 6
+  fill(0); //black background
+  rect(0+x-5*width, 0, width, height);
+  fill(255, 0, 0); //red double cross thing
+  rect(0+x-5*width, height/2-15, width, 30);//horizontal line
+  rect(width/8+x-5*width, 0, 30, height);//vertical line 1
+  rect(3.0/8.0*width+x-5*width, 0, 30, height);//vertical line 2
+
+  //chile, flag 7
+  fill(0, 0, 250); //blue left horizontal bar
+  rect(0+x-6*width, 0, 125, 145); 
+  fill(250); //white right horizontal bar
+  rect(125+x-6*width, 0, 320, 145);
+  fill(250, 0, 0); //red last horizontal bar
+  rect(0+x-6*width, 145, 320, 270);
+  line(42+x-6*width, 53, 63, 30);
+  line(82+x-6*width, 53, 63, 30);
+  line(82+x-6*width, 53, 105, 58);
+  line(15+x-6*width, 58, 42, 53);
+  line(90+x-6*width, 75, 105, 58);
+  line(35+x-6*width, 75, 15, 58);
+  line(35+x-6*width, 75, 25, 95);
+  line(25+x-6*width, 95, 53, 88);
+  line(53+x-6*width, 88, 95, 95);
+  line(95+x-6*width, 95, 90, 75); 
+
+  //jamaica, flag 8
+  //  background(250, 230, 82); // This line is messing everything up
+  fill (0, 250, 0); //green triangle top
+  triangle (10+x-7*width, 0, 160+x-7*width, 120, 310+x-7*width, 0);
+  fill (0, 250, 0); //green triangle bot
+  triangle (10+x-7*width, 270, 160+x-7*width, 150, 310+x-7*width, 270);
+  fill (0); //black triangle left
+  triangle (0+x-7*width, 10, 145+x-7*width, 135, 0+x-7*width, 260);
+  fill (0); //black triangle right
+  triangle (320+x-7*width, 10, 175+x-7*width, 135, 320+x-7*width, 260);
+
+  //puerto rico, flag 9 
+  fill(0, 0, 250); //blue triangle
+  triangle(0+x-8*width, 0, 0+x-8*width, 270, 166+x-8*width, 135);
+  fill(255, 0, 0); //red quad 1
+  quad(0+x-8*width, 0, 54+x-8*width, 54, 320+x-8*width, 54, 320+x-8*width, 0);
+  fill(250); //white quad 1
+  quad(54+x-8*width, 54, 108+x-8*width, 108, 320+x-8*width, 108, 320+x-8*width, 54);
+  fill(255, 0, 0); //red quad 2
+  quad(108+x-8*width, 108, 135+x-8*width, 135, 320+x-8*width, 135, 320+x-8*width, 108);
+  fill(255, 0, 0); //red quad 3
+  quad(135+x-8*width, 135, 108+x-8*width, 162, 320+x-8*width, 162, 320+x-8*width, 135);
+  fill(250); //white quad 2
+  quad(108+x-8*width, 162, 320+x-8*width, 162, 320+x-8*width, 216, 54+x-8*width, 216);
+  fill(250, 0, 0); //red quad 4
+  quad(54+x-8*width, 216, 0+x-8*width, 270, 320+x-8*width, 270, 320+x-8*width, 216);
+
+  //Kuwait flag, 10
+  fill(80, 168, 62); //green quad
+  quad(0+x-9*width, 0, 80+x-9*width, 90, 320+x-9*width, 90, 320+x-9*width, 0);
+  fill(250); //white quad
+  quad(80+x-9*width, 90, 80+x-9*width, 180, 320+x-9*width, 180, 320+x-9*width, 90);
+  fill(250, 0, 0); //red quad
+  quad(80+x-9*width, 180, 0+x-9*width, 270, 320+x-9*width, 270, 320+x-9*width, 180);
+  fill(0); //black quad
+  quad(0+x-9*width, 0, 0+x-9*width, 270, 80+x-9*width, 180, 80+x-9*width, 90);
+
+  x=x+1; //scrolls flags to right
+
+  if (x==9*width) { //resets flag scrolling, the number multiplied 
+    x=0; //to the width is how many flag widths the first flag has moved
+  }   // so the end result will be 9 widths bc we have 10 flags
+}
